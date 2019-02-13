@@ -1,0 +1,61 @@
+{
+  "name": "reactive-node-mailer",
+  "version": "1.0.0",
+  "description": "basic Node app that build and sends emails using React",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./dist && webpack --config webpack.config.js",
+    "debug": "yarn build && node --inspect=5858 ./dist/server",
+    "eslint": "eslint .",
+    "extract": "format-message extract -g underscored_crc32 -o translations/en.json 'src/**/*.js'",
+    "start": "yarn build && node ./dist/server",
+    "test": "yarn eslint"
+  },
+  "keywords": [
+    "react",
+    "node",
+    "email",
+    "queue"
+  ],
+  "author": "Mauro Buselli <maurobuselli@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.4"
+  },
+  "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "8.0.5",
+    "babel-plugin-transform-format-message": "^6.2.1",
+    "babel-polyfill": "6.26.0",
+    "classnames": "2.2.6",
+    "css-loader": "2.1.0",
+    "eslint": "^5.13.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-react": "^7.12.4",
+    "express": "4.16.4",
+    "format-message-cli": "6.2.1",
+    "inline-css": "2.4.1",
+    "nodemailer": "5.1.1",
+    "react": "16.8.1",
+    "react-dom": "16.8.1",
+    "style-loader": "0.23.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.3.1",
+    "@babel/preset-react": "7.0.0",
+    "format-message": "6.2.1",
+    "json-loader": "0.5.7",
+    "kue": "0.11.6",
+    "react-html-email": "3.0.0",
+    "typings-for-css-modules-loader": "1.7.0",
+    "webpack": "4.29.3",
+    "webpack-cli": "3.2.3",
+    "webpack-dev-middleware": "3.5.2",
+    "webpack-hot-middleware": "2.24.3",
+    "webpack-node-externals": "1.7.2"
+  }
+}
