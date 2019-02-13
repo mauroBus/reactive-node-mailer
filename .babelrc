@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    ["transform-format-message", {
+      "generateId": "underscored_crc32",
+      "inline": false
+    }]
+  ]
+}
