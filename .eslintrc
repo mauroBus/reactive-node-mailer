@@ -5,6 +5,9 @@
     "es6": true
   },
   "parser": "babel-eslint",
+  "plugins": [
+    "flowtype"
+  ],
   "rules": {
     "no-console": "off",
     "no-restricted-syntax": [
@@ -25,7 +28,8 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:flowtype/recommended"
   ],
   "overrides": [
     {
