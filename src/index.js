@@ -25,7 +25,6 @@ let server = app.listen(port, () => {
 
 if (module.hot) {
   module.hot.accept('./server', () => {
-    console.log('_____________________________________')
     server.close(() => {
       init()
       server = app.listen(port)

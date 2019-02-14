@@ -6,7 +6,6 @@ declare var module: {
   }
 }
 
-// @flow
 declare type TemplateType = 'ALERT' | 'CUSTOM' | 'TEST'
 
 declare type EmailProps = {|
