@@ -9,7 +9,7 @@ export type SendEmailProps = {|
   to: string
 |}
 
-export async function sendEmail(mailOptions: SendEmailProps) {
+export async function send(mailOptions: SendEmailProps) {
   // Generate test SMTP service account from ethereal.email.
   // Only needed for this example as I don't have a real mail account for testing.
   const account = await nodemailer.createTestAccount()

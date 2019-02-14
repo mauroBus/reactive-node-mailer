@@ -5,7 +5,8 @@ import {
   Box,
   Image,
   Item,
-  Span
+  Span,
+  A
 } from 'react-html-email'
 
 const Footer = () => (
@@ -33,11 +34,11 @@ const Footer = () => (
                   className="image"
                   height={10}
                   src="http://www.transparentpng.com/download/instagram-heart/th39g0-heart-photos.png"
-                  style={{ maxWidth: "100%" }}
+                  style={{ maxWidth: "100%", display: "inline" }}
                   width={12}
                 /> </Span> from Instructure
               <br />
-              Using plain <a className="muted" href="https://reactjs.org/docs/introducing-jsx.html">JSX</a>
+              Using <A className="muted" href="https://github.com/mauroBus/reactive-node-mailer">reactive-node-mailer</A>
             </div>
           </Item>
         </Box>

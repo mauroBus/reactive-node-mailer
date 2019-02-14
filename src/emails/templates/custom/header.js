@@ -17,7 +17,7 @@ const Header = () => (
               width: "100%"
             }}
           >
-            <Item style={{ textAlign: "center"}} cellPadding={20}>
+            <Item cellPadding={20}>
               <A
                 href="https://www.instructure.com"
                 title="Instructure"
@@ -31,6 +31,7 @@ const Header = () => (
                   width={200}
                   height={80}
                   className="image"
+                  style={{ margin: "0 auto" }}
                 />
               </A>
             </Item>

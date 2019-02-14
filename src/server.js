@@ -4,7 +4,7 @@ import React from 'react'
 import express from 'express'
 import bodyParser from 'body-parser'
 import { loadTranslations } from './languages'
-import { renderEmail, sendEmailTemplate } from './emails'
+import { renderEmail, sendEmail } from './emails'
 import { renderToString } from 'react-dom/server'
 
 const app = express()
@@ -24,7 +24,7 @@ export function init() {
       subject = 'No subject',
       to = 'bar@example.com, baz@example.com',
       toName,
-      type = 'TEST',
+      type = 'CUSTOM',
     } = req.query
     const data = {
       from,
@@ -50,7 +50,7 @@ export function init() {
       subject = 'No subject',
       to = 'bar@example.com, baz@example.com',
       toName,
-      type = 'TEST'
+      type = 'CUSTOM'
     } = req.body
     const emailInfo: EmailProps = {
       from,
@@ -62,7 +62,7 @@ export function init() {
 
     try {
       const email = await renderEmail(emailInfo)
-      const link: string = await sendEmailTemplate({
+      const link: string = await sendEmail({
         from,
         html: email,
         subject,

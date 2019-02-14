@@ -94,6 +94,7 @@ By running `yarn extract`, all translations are put in the `translations/en.json
   * Improve API.
   * Queue for requests.
   * Add prettier.
+  * Add a CSS pre-processor (PostCSS ?)
   * Make it production ready (build system, security, etc).
 
 ## License

@@ -3,7 +3,7 @@ import React, { type Element as ReactElement} from 'react'
 import { renderToString } from 'react-dom/server'
 import ReactHTMLEmail from 'react-html-email'
 import inlineCss from 'inline-css'
-import { sendEmail, type SendEmailProps } from './mailer'
+import { send, type SendEmailProps } from './mailer'
 
 // Email templates:
 import AlertTemplate from './templates/alert'
@@ -48,8 +48,8 @@ export const renderEmail = (props: EmailProps): string => {
   return finalTemplate
 }
 
-export const sendEmailTemplate = (props: SendEmailProps) => {
-  return sendEmail(props)
+export const sendEmail = (props: SendEmailProps) => {
+  return send(props)
 }
 
 function renderTemplate({ type, ...data }: EmailProps): ReactElement<*> {
