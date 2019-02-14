@@ -1,2 +1,3 @@
-import ReactEmail from 'src'
+// @flow
+import ReactEmail from './src'
 export default ReactEmail

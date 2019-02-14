@@ -1,8 +1,9 @@
-import React from 'react'
+// @flow
+import React, { type Element as ReactElement} from 'react'
 import { renderToString } from 'react-dom/server'
 import ReactHTMLEmail from 'react-html-email'
 import inlineCss from 'inline-css'
-import { sendEmail } from './mailer'
+import { sendEmail, type SendEmailProps } from './mailer'
 
 // Email templates:
 import AlertTemplate from './templates/alert'
@@ -31,7 +32,7 @@ ReactHTMLEmail.configStyleValidator({
   ]
 })
 
-export const renderEmail = (props) => {
+export const renderEmail = (props: EmailProps): string => {
   // Render the email template according to the type:
   const template = renderTemplate(props)
 
@@ -39,7 +40,7 @@ export const renderEmail = (props) => {
   const stringTemplate = renderToString(template)
 
   // Inline the CSS properties into the `style` attribute of each DOM element.
-  const finalTemplate = inlineCss(stringTemplate, {
+  const finalTemplate: string = inlineCss(stringTemplate, {
     preserveMediaQueries: true,
     url: ' '
   })
@@ -47,11 +48,11 @@ export const renderEmail = (props) => {
   return finalTemplate
 }
 
-export const sendEmailTemplate = (props) => {
+export const sendEmailTemplate = (props: SendEmailProps) => {
   return sendEmail(props)
 }
 
-function renderTemplate({ type, ...data }) {
+function renderTemplate({ type, ...data }: EmailProps): ReactElement<*> {
   switch (type) {
     case 'ALERT':
       return <AlertTemplate {...data} />

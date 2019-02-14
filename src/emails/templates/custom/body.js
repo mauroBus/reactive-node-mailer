@@ -1,9 +1,14 @@
+// @flow
 import React from 'react'
 import t from 'format-message'
 import Button from '../../common/button'
 import { Item, Box } from 'react-html-email'
 
-const Body = ({ userName }) => (
+type Props = {|
+  userName: string
+|}
+
+const Body = ({ userName }: Props) => (
   <Item>
     <div className="section">
       <Box

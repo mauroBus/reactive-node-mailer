@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import t from 'format-message'
 import {
@@ -12,19 +13,7 @@ const Footer = () => (
     <div className="section footer">
       <div
         className="content center text-center"
-        style={{
-          color: "#9ca299",
-          display: "block",
-          fontSize: "14px",
-          margin: "0 auto",
-          maxWidth: "600px",
-          padding: "15px",
-          paddingBottom: "5px",
-          paddingLeft: "5px",
-          paddingRight: "5px",
-          paddingTop: "0px",
-          textAlign: "center",
-        }}
+        style={{ color: "#9ca299", fontSize: "14px" }}
       >
         <Box
           className="row"
@@ -34,20 +23,8 @@ const Footer = () => (
         >
           <Item className="container">
             <div
-              className="content"
-              style={{
-                color: "#9ca299",
-                display: "block",
-                fontSize: "14px",
-                margin: "0 auto",
-                maxWidth: "600px",
-                padding: "15px",
-                paddingBottom: "5px",
-                paddingLeft: "5px",
-                paddingRight: "5px",
-                paddingTop: "0px",
-                textAlign: "center"
-              }}
+              className="content center text-center"
+              style={{ color: "#9ca299", fontSize: "14px" }}
               translate="yes"
             >
               Sent with <Span style={{ margin: "0 2px -2px 2px" }}>

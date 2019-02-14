@@ -1,8 +1,15 @@
-import React from 'react'
+// @flow
+import React, { type Element as ReactElement } from 'react'
 import { A } from 'react-html-email'
 import classnames from 'classnames'
 
-export default function Footer({ href, className, children }) {
+type Props = {|
+  children?: ReactElement<*> | string,
+  className?: string,
+  href: string
+|}
+
+export default function Footer({ href, className, children }: Props) {
   return (
     <A
       className={classnames('btn-primary', className)}

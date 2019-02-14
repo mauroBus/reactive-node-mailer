@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import { Item, A, Box, Image } from 'react-html-email'
 
@@ -8,12 +9,13 @@ const Header = () => (
       style={{ lineHeight: "150%", borderSpacing: "0", marginBottom: "10px", marginTop: "10px", width: "100%" }}
     >
       <Item className="container">
-        <div
-          className="content"
-          style={{ padding: "15px", maxWidth: "600px", margin: "0 auto", display: "block", paddingLeft: "5px", paddingRight: "5px", paddingBottom: "5px", paddingTop: "0px" }}
-        >
+        <div className="content">
           <Box
-            style={{ borderSpacing: "0", lineHeight: "150%", width: "100%" }}
+            style={{
+              borderSpacing: "0",
+              lineHeight: "150%",
+              width: "100%"
+            }}
           >
             <Item style={{ textAlign: "center"}} cellPadding={20}>
               <A

@@ -1,7 +1,15 @@
+// @flow
 import 'babel-polyfill'
 import nodemailer from 'nodemailer'
 
-export async function sendEmail(mailOptions) {
+export type SendEmailProps = {|
+  from: string,
+  html: string,
+  subject: string,
+  to: string
+|}
+
+export async function sendEmail(mailOptions: SendEmailProps) {
   // Generate test SMTP service account from ethereal.email.
   // Only needed for this example as I don't have a real mail account for testing.
   const account = await nodemailer.createTestAccount()
@@ -19,7 +27,7 @@ export async function sendEmail(mailOptions) {
 
   // send mail with defined transport object
   const info = await transporter.sendMail(mailOptions)
-  const link = nodemailer.getTestMessageUrl(info)
+  const link: string = nodemailer.getTestMessageUrl(info)
 
   console.log('Message sent: %s', info.messageId)
   // Preview only available when sending through an Ethereal account

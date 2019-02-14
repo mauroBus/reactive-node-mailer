@@ -1,3 +1,4 @@
+// @flow
 import 'babel-polyfill'
 import React from 'react'
 import express from 'express'
@@ -51,7 +52,8 @@ export function init() {
       toName,
       type = 'TEST'
     } = req.body
-    const data = {
+    const emailInfo: EmailProps = {
+      from,
       subject,
       to: 'some@email.com',
       toName,
@@ -59,13 +61,12 @@ export function init() {
     }
 
     try {
-      const email = await renderEmail(data)
-      const link = await sendEmailTemplate({
+      const email = await renderEmail(emailInfo)
+      const link: string = await sendEmailTemplate({
         from,
         html: email,
         subject,
-        to,
-        toName
+        to
       })
 
       res

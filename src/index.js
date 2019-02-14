@@ -1,3 +1,4 @@
+// @flow
 import app, { init } from './server'
 import webpack from 'webpack'
 import webpackDevMiddleware from 'webpack-dev-middleware'

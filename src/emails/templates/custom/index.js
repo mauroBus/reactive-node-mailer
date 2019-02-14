@@ -1,4 +1,5 @@
-import React from 'react'
+// @flow
+import React, { type Element as ReactElement } from 'react'
 import Main from '../main'
 import Body from './body'
 import Header from './header'
@@ -6,7 +7,9 @@ import Footer from './footer'
 
 import styles from './styles.css'
 
-export default function CustomTemplate({ toName, subject }) {
+export default function CustomTemplate(
+  { toName, subject }: TemplateProps
+): ReactElement<typeof Main> {
   return (
     <Main
       className="body-wrap"

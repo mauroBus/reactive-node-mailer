@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import t from 'format-message'
 import { Item, Span, A, Image } from 'react-html-email'
