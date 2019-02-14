@@ -48,7 +48,7 @@ A `headCSS` prop can be passed to the `<Email>` component for defining general s
   * Front-end developers are used to write code in React, they can immediately start creating email templates.
   * Back-end developers no longer need to write tangled code in HTML & CSS, technologies they don't usually use and feel comfortable. This work can rely on front-end folks, improving the productivity.
   * It relies on the same translations system (i18n) used in the front-end ([format-message](https://github.com/format-message/format-message) in this case). We don't need to find a new way to do the same thing on server side.
-  * Reuse the styled components of the UI (buttons, texts, tables, etc). If the UI was built in React, it's possible to reuse much of them. If the UI is not built with React, it could reuse specific styles.
+  * Reuse the styled components of the UI (buttons, texts, tables, etc). If the UI was built in React, it's possible to reuse much of them. If the UI is not built with React, it can still reuse specific styles.
   * The Node server is quite simple and quick, front-end developers can tweak it according to their need. The configuration uses Webpack, ESLint, etc, it can be easily tweaked according to the team preferences.
   * When building a new email's template, the partial result can be seeing in the browser and inspected with devTools.
   * The CSS is placed in `.css` files and the markup is written in React `JSX`. This separation of concerns makes the code clearer and more maintainable. No inline styles required, the app automatically injects the styles in the specific DOM elements.
@@ -57,7 +57,7 @@ A `headCSS` prop can be passed to the `<Email>` component for defining general s
 
 * If your server is not written in Node, it requires to spin-up a Node server. If your application has a heavy workload, this could not be a problem since you probably already need to move the emails to a separated microservice.
 * The performance of building a template with React is worse than when using a simpler template system.
-React creates a nodes representation (~DOM) that is parsed with `react-dom`. Additionally, React has many other features, like updating the nodes when something change. These features add a bit of extra computational cost when building the template.
+React creates a node tree representation (~DOM) that is parsed with `react-dom`. Additionally, React has many other features, like updating the nodes when data change. These features add a bit of extra computational cost when building the template.
 However, the complexity of the emails templates is very low, and React was built with performance in mind, so I don't thing the performance impact is noticeable in the practice.
 
 ## Technology

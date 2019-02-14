@@ -18,14 +18,14 @@ const Body = ({ userName }: Props) => (
         <Item className="container">
           <div>
             <div className="p">
-              {t('Hey {userName}:', { userName })}
+              {t('Hi {userName}:', { userName })}
             </div>
 
             <div
               className="p"
               style={{ marginTop: "1em" }}
             >
-              {t('Good news! You have the option to add a very custom template.')}
+              {t('Good news! You have the option to create custom email templates.')}
             </div>
 
             <div
@@ -35,11 +35,6 @@ const Body = ({ userName }: Props) => (
             >
               This is a custom test with some <b>bold</b> inline text.
             </div>
-
-            <div
-              className="p"
-              style={{ marginTop: "1em" }}
-            ></div>
           </div>
         </Item>
       </Box>

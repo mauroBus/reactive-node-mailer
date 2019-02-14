@@ -2,14 +2,14 @@
   "go_see_more_93ed1d0f": {
     "message": "Go see more!"
   },
-  "good_news_you_have_the_option_to_add_a_very_custom_23bfce80": {
-    "message": "Good news! You have the option to add a very custom template."
-  },
-  "hey_username_3a8407fb": {
-    "message": "Hey { userName }:"
+  "good_news_you_have_the_option_to_create_custom_ema_3bb8a42d": {
+    "message": "Good news! You have the option to create custom email templates."
   },
   "hi_name_9450e8c2": {
     "message": "Hi { name }"
+  },
+  "hi_username_1bbe1fb7": {
+    "message": "Hi { userName }:"
   },
   "love_134c6400": {
     "message": "Love"
